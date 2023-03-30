@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bus Ticket Reservation</title>
+	<style>
+		label {
+			display: block;
+			margin-bottom: 10px;
+		}
+		input[type="text"], select {
+			padding: 5px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			margin-bottom: 10px;
+		}
+		button {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+		button:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<h1>Bus Ticket Reservation</h1>
+	<form>
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required>
+
+		<label for="email">Email:</label>
+		<input type="text" id="email" name="email" required>
+
+		<label for="from">From:</label>
+		<select id="from" name="from" required>
+			<option value="">Select an option</option>
+			<option value="New York">New York</option>
+			<option value="Los Angeles">Los Angeles</option>
+			<option value="Chicago">Chicago</option>
+			<option value="Houston">Houston</option>
+			<option value="Miami">Miami</option>
+		</select>
+
+		<label for="to">To:</label>
+		<select id="to" name="to" required>
+			<option value="">Select an option</option>
+			<option value="San Francisco">San Francisco</option>
+			<option value="Seattle">Seattle</option>
+			<option value="Denver">Denver</option>
+			<option value="Atlanta">Atlanta</option>
+			<option value="Boston">Boston</option>
+		</select>
+
+		<label for="date">Date:</label>
+		<input type="date" id="date" name="date" required>
+
+		<button type="submit" onclick="reserveTicket()">Reserve Ticket</button>
+	</form>
+
+	<script>
+		function reserveTicket() {
+			var name = document.getElementById("name").value;
+			var email = document.getElementById("email").value;
+			var from = document.getElementById("from").value;
+			var to = document.getElementById("to").value;
+			var date = document.getElementById("date").value;
+
+			// Here you can use AJAX to send the form data to the server for processing and storage
+
+			alert("Your ticket has been reserved! Thank you for choosing our service.");
+		}
+	</script>
+</body>
+</html>
